@@ -2,14 +2,29 @@
 @import './libs/_normalize.scss';
 
 @import './components/navbar.scss';
+@import './components/header.scss';
+@import './components/courses.scss';
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container {
   width: 1440px;
+  position: relative;
+}
+
+.btn {
+  height: max-content;
+  padding: 12px 24px;
+  background-color: $blueMain;
+  color: #fff;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 
