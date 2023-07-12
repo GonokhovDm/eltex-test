@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+  font-family: "Nunito", Roboto, system-ui, Tahoma, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: #222222;
+}
+
+a,
+span,
+p,
+b,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #222222;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 35px;
+  border-radius: 0px 0px 36px 36px;
+  -webkit-box-shadow: 0px 0px 12px 6px rgba(39, 94, 199, 0.05);
+          box-shadow: 0px 0px 12px 6px rgba(39, 94, 199, 0.05);
+}
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav ul.nav__links {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 80px;
+}
+nav ul.nav__links li {
+  margin-right: 32px;
+}
+nav ul.nav__links li:last-child {
+  margin-right: 0;
+}
+nav ul.nav__links li a {
+  color: #222222;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+  font-size: 18px;
+  font-weight: 500;
+}
+nav ul.nav__links li a::before, nav ul.nav__links li a::after {
+  position: relative;
+  bottom: 2px;
+  opacity: 0;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+}
+nav ul.nav__links li a::before {
+  content: "<";
+}
+nav ul.nav__links li a::after {
+  content: ">";
+}
+nav ul.nav__links li a:hover {
+  color: #275EC7;
+}
+nav ul.nav__links li a:hover::before, nav ul.nav__links li a:hover::after {
+  opacity: 1;
+}
+nav ul.nav__contacts li {
+  margin-right: 16px;
+}
+nav ul.nav__contacts li:last-child {
+  margin-right: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  width: 1440px;
+}

@@ -15,7 +15,7 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: $black;
+  color: $blackMain;
 }
 
 a,
@@ -27,7 +27,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: $black;
+  color: $blackMain;
 }
 
 h1 {
@@ -44,12 +44,7 @@ a {
   text-decoration: none;
 }
 
-@mixin noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
+ul li {
+  list-style: none;
 }
+

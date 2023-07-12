@@ -1,0 +1,16 @@
+@import './_variables.scss';
+@import './libs/_normalize.scss';
+
+@import './components/navbar.scss';
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1440px;
+}
+
+
+
