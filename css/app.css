@@ -117,6 +117,15 @@ nav ul.nav__contacts li {
 nav ul.nav__contacts li:last-child {
   margin-right: 0;
 }
+nav ul.nav__contacts li a {
+  color: #275EC7;
+  font-size: 18px;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+nav ul.nav__contacts li a:hover {
+  color: #3893FF;
+}
 
 body {
   display: -webkit-box;

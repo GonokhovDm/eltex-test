@@ -60,6 +60,16 @@ nav {
         &:last-child {
           margin-right: 0;
         }
+
+        a {
+          color: $blueMain;
+          font-size: 18px;
+          transition: color $duration ease-in-out;
+
+          &:hover {
+            color: $blueLight;
+          }
+        }
       }
     }
   }
