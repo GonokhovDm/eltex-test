@@ -33,16 +33,6 @@ h5 {
   color: #222222;
 }
 
-h1 {
-  font-size: 48px;
-}
-
-h2 {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 30px;
-}
-
 a {
   text-decoration: none;
 }
@@ -58,6 +48,9 @@ button {
 nav {
   position: fixed;
   width: 100%;
+  border-radius: 0px 0px 36px 36px;
+  -webkit-box-shadow: 0px 0px 12px 6px rgba(39, 94, 199, 0.05);
+          box-shadow: 0px 0px 12px 6px rgba(39, 94, 199, 0.05);
   max-width: 1440px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,9 +63,6 @@ nav {
           justify-content: space-between;
   background-color: #fff;
   padding: 35px 32px;
-  border-radius: 0px 0px 36px 36px;
-  -webkit-box-shadow: 0px 0px 12px 6px rgba(39, 94, 199, 0.05);
-          box-shadow: 0px 0px 12px 6px rgba(39, 94, 199, 0.05);
   z-index: 100;
 }
 nav ul {
@@ -236,25 +226,53 @@ nav ul.nav__contacts li a:hover {
 }
 
 .courses {
-  margin-top: 200px;
+  padding-top: 200px !important;
+  position: relative;
+}
+.courses__bg-shape {
+  position: absolute;
+  z-index: 0;
+  top: 3%;
+  left: 25%;
 }
 .courses .courses__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 52px;
 }
-.courses .courses__title h2 {
-  font-size: 60px;
-  font-weight: 700;
-}
-.courses .courses__title .swiper-button-prev, .courses .courses__title .swiper-button-next {
-  opacity: 0;
+.courses .courses__title .swiper-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  width: 120px;
 }
 .courses .courses__title .swiper-button-prev::after, .courses .courses__title .swiper-button-next::after {
   content: "";
+  width: 24px;
+  height: 24px;
+  padding: 12px 24px;
+  background-image: url(../../assets/svg/Shevron.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px #275EC7 solid;
+  border-radius: 12px;
+}
+.courses .courses__title .swiper-button-next::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-right: 16px;
 }
 .courses__cards {
   margin-top: 40px;
@@ -297,6 +315,226 @@ nav ul.nav__contacts li a:hover {
   width: 100%;
 }
 
+.employment {
+  margin-top: 200px;
+  padding: 100px 80px;
+  background-color: #275EC7;
+  border-radius: 24px;
+  position: relative;
+}
+.employment__bg-shape {
+  position: absolute;
+  top: -7%;
+  right: -20%;
+}
+
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 48px;
+}
+.top__left {
+  width: 50%;
+}
+.top__left h2 {
+  color: #fff;
+}
+.top__left p {
+  margin-top: 24px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+}
+.top__left button {
+  margin-top: 40px;
+}
+
+.center {
+  margin-top: 80px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 32px 80px;
+  background-color: #fff;
+  border-radius: 24px;
+}
+.center__item {
+  width: 30%;
+}
+
+.bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 80px;
+}
+.bottom h3 {
+  text-align: center;
+  color: #fff;
+}
+.bottom__content {
+  margin-top: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 48px;
+}
+.bottom__left {
+  width: 50%;
+}
+.bottom__right {
+  width: 50%;
+}
+.bottom__right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+.bottom__right ul li h4 {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bottom__right ul li h4::before {
+  content: "";
+  display: block;
+  margin-right: 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #1FB94B;
+}
+.bottom__right ul li p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 140%;
+  margin-top: 12px;
+}
+
+.footer {
+  margin-top: 200px;
+  width: 100%;
+  border-radius: 36px 36px 0 0;
+  -webkit-box-shadow: 0px 0px 12px 6px rgba(39, 94, 199, 0.05);
+          box-shadow: 0px 0px 12px 6px rgba(39, 94, 199, 0.05);
+  max-width: 1440px;
+  padding: 35px 32px;
+}
+.footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__top ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer__top ul.nav__links {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footer__top ul.nav__links li {
+  margin-right: 32px;
+}
+.footer__top ul.nav__links li:last-child {
+  margin-right: 0;
+}
+.footer__top ul.nav__links li a {
+  color: #222222;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+  font-size: 18px;
+  font-weight: 500;
+}
+.footer__top ul.nav__links li a::before, .footer__top ul.nav__links li a::after {
+  position: relative;
+  bottom: 2px;
+  opacity: 0;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+}
+.footer__top ul.nav__links li a::before {
+  content: "<";
+}
+.footer__top ul.nav__links li a::after {
+  content: ">";
+}
+.footer__top ul.nav__links li a:hover {
+  color: #275EC7;
+}
+.footer__top ul.nav__links li a:hover::before, .footer__top ul.nav__links li a:hover::after {
+  opacity: 1;
+}
+.footer__top ul.nav__contacts li {
+  margin-right: 16px;
+}
+.footer__top ul.nav__contacts li:last-child {
+  margin-right: 0;
+}
+.footer__top ul.nav__contacts li a {
+  color: #275EC7;
+  font-size: 18px;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+.footer__top ul.nav__contacts li a:hover {
+  color: #3893FF;
+}
+.footer__bottom {
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+.footer__bottom p {
+  opacity: 0.5;
+  font-size: 18px;
+  line-height: 130%;
+}
+.footer__bottom-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -308,6 +546,28 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+h4 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 120%;
 }
 
 .container {
@@ -326,4 +586,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
+}
+.btn._secondary {
+  border: 2px #fff solid;
 }

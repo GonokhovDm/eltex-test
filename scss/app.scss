@@ -4,11 +4,35 @@
 @import './components/navbar.scss';
 @import './components/header.scss';
 @import './components/courses.scss';
+@import './components/employment.scss';
+@import './components/footer.scss';
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+h4 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 120%;
 }
 
 .container {
@@ -25,6 +49,10 @@ body {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
+
+  &._secondary {
+    border: 2px #fff solid;
+  }
 }
 
 
