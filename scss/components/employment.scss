@@ -20,7 +20,6 @@
   &__left {
     width: 50%;
 
-
     h2 {
       color: #fff;
     }
@@ -66,11 +65,81 @@
   &__content{
     margin-top: 44px;
     display: flex;
-    gap: 48px;
+    gap: 75px;
   }
 
   &__left {
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .area {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      &__top {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        animation: slidedown 10s infinite;
+
+        img {
+          position: absolute;
+        }
+
+        .elixir {
+          top: 45%;
+          left: -5%;
+        }
+
+        .desk {
+          top: 10%;
+        }
+
+        .erlang {
+          top: 5%;
+          right: 50%;
+        }
+
+        .java {
+          top: 20%;
+          right: 15%;
+        }
+      }
+
+      &__bottom {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        animation: slidetop 10s infinite;
+
+        img {
+          position: absolute;
+        }
+
+        .wires {
+          bottom: 10%;
+          left: 8%;
+        }
+
+        .workspace {
+          bottom: 12%;
+          right: 15%;
+        }
+
+        .swift {
+          bottom: 35%;
+          right: 0;
+        }
+      }
+    }
   }
 
   &__right {
@@ -104,6 +173,276 @@
           line-height: 140%;
           margin-top: 12px;
         }
+      }
+    }
+  }
+}
+
+@keyframes slidedown {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slidetop {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1440px) {
+  .top {
+    flex-direction: column;
+
+    &__left {
+      width: 100%;
+    }
+
+    &__right {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .center {
+    padding: 32px;
+    &__item {
+      text-align: center;
+      p {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .bottom {
+    &__left {
+     transform: scale(70%);
+
+     .area {
+      &__top {
+        .elixir {
+          left: -25%;
+        }
+
+        .desk {
+          top: 15%;
+          left: -20%;
+        }
+
+        .erlang {
+          top: 20%;
+          left: 40%;
+        }
+
+        .java {
+          right: -10%;
+        }
+      }
+
+      &__bottom {
+        .wires {
+          bottom: 15%;
+          left: -15%;
+        }
+
+        .workspace {
+          bottom: 20%;
+          right: -10%;
+        }
+
+        .swift {
+          bottom: 40%;
+          right: -30%;
+        }
+      }
+     }
+    } 
+  }
+}
+
+@media (max-width: 992px) {
+  .top {
+    &__left {
+      img {
+        margin-top: 20px;
+      }
+    }
+  }
+  .bottom {
+    &__content {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__left {
+      margin-top: 30px;
+      .area__top {
+        bottom: 50%;
+
+        .elixir {
+          left: -50%;
+          top: 80%;
+        }
+
+        .desk {
+          top: 5%;
+          left: -40%;
+        }
+
+        .java {
+          right: -20%;
+        }
+      }
+
+      .area__bottom {
+        top: 50%;
+
+        .wires {
+          left: -40%;
+        }
+
+        .workspace {
+          bottom: 20%;
+          right: -10%;
+        }
+
+        .swift {
+          bottom: 80%;
+          right: -50%;
+        }
+      }
+    }
+
+    &__right {
+      width: 100%;
+      ul {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 20px;
+
+        li {
+          width: 48%;
+        }
+      }
+    }
+  }
+
+  .center {
+    flex-direction: column;
+    gap: 24px;
+
+    &__item {
+      width: 100%;
+      text-align: left;
+      p {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .top__left {
+    img {
+      width: 100%;
+    }
+
+  }
+  .center {
+    flex-direction: column;
+    gap: 24px;
+
+    &__item {
+      width: 100%;
+      text-align: left;
+      p {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .bottom {
+    &__left {
+      .area__top {
+        .elixir {
+          left: -100%;
+        }
+
+        .desk {
+          left: -80%;
+        }
+
+        .java {
+          right: -60%;
+        }
+      }
+
+      .area__bottom {
+        .wires {
+          left: -80%;
+        }
+
+        .workspace {
+          right: -50%;
+        }
+
+        .swift {
+          right: -100%;
+        }
+      }
+    }
+
+    &__right {
+      ul li{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .employment {
+    margin-top: 60px;
+    padding: 60px 20px;
+  }
+
+  .top__left {
+    img {
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+
+  .top__right {
+    display: none;
+  }
+
+  .center {
+    margin-top: 40px;
+  }
+
+  .bottom {
+    margin-top: 40px;
+
+    &__right {
+      ul li p {
+        font-size: 16px;
       }
     }
   }

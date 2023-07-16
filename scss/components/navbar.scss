@@ -9,7 +9,7 @@ nav {
   justify-content: space-between;
   background-color: #fff;
   padding: 35px 32px;
-  z-index: 100;
+  z-index: 4;
   
   ul {
     display: flex;
@@ -76,6 +76,189 @@ nav {
         }
       }
     }
+  }
+}
+
+
+@media (max-width: 1440px) {
+  nav {
+    max-width: 992px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .logo {
+    flex: 1;
+    height: 32px;
+    img {
+      height: 100%;
+    }
+  }
+
+  nav {
+    max-width: 768px;
+    ul {
+      &.nav__links {
+        margin-left: 0;
+        justify-content: center;
+      }
+
+      &.nav__contacts {
+        height: 32px;
+        position: relative;
+        top: 3px;
+        li {
+          a {
+            img {
+              width: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.burger {
+  margin-left: 24px;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+
+  span, &::before, &::after {
+	left: 0;
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	transition: all 0.3s ease;
+  background-color: $blackMain;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+	}
+
+	&::before {
+		top: 0;
+    width: 50%;
+	}
+
+	&::after {
+		bottom: 0;
+    width: 50%;
+    right: 0;
+    margin-left: auto;
+	}
+
+	span {
+    top: 50%;
+		transform: scale(1) translate(0px, -50%);
+	}
+}
+
+.mobile-menu {
+
+  .bg-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $blackMain;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity .6s ease;
+    z-index: -1;
+
+    &.active {
+      opacity: .9;
+      z-index: 5;
+    }
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(200%);
+    z-index: 6;
+    width: 90vw;
+    min-height: 100vh;
+    background-color: #FAFCFF;
+    border-radius: 24px 0 0 24px;
+    padding: 24px 20px;
+    overflow: auto;
+    transition: transform .6s ease;
+
+    &.active {
+      transform: translate(0);
+    }
+
+    .close-burger {
+      background-color: transparent;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+    }
+
+    .logo {
+      height: 24px;
+      img {
+        height: 24px;
+      }
+    }
+
+    &__links {
+      margin-top: 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      li {
+        a {
+          font-size: 24px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__contacts {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      li {
+        a {
+          font-size: 18px;
+          font-weight: 500;
+          color: $blueMain;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  nav {
+    width: 100%;
+
+    .logo {
+      height: 24px;
+    }
+
+    ul {
+      &.nav__contacts {
+        li {
+          margin-right: 12px;
+        }
+      }
+    }
+    
   }
 }
   

@@ -16,8 +16,6 @@
     align-items: center;
     height: 52px;
 
-    
-
     .swiper-buttons {
       display: flex;
       justify-content: flex-end;
@@ -35,6 +33,15 @@
       background-repeat: no-repeat;
       border: 2px $blueMain solid;
       border-radius: 12px;
+      transition: border-color $duration ease;
+    }
+
+    .swiper-button-prev:hover::after, .swiper-button-next:hover::after {
+      border-color: $blueDark;
+    }
+
+    .swiper-button-prev:active::after, .swiper-button-next:active::after {
+      border-color: $blueLight;
     }
 
     .swiper-button-next::after {
@@ -45,27 +52,32 @@
 
   &__cards {
     margin-top: 40px;
+    padding: 0 5px;
 
     &-item {
       position: relative;
-      max-width: 33%;
       padding: 32px;
       background-color: #fff;
+      box-shadow: 0px 0px 10px 0px rgba(77, 92, 100, 0.10);
+      border-radius: 24px;
+      transition: transform $duration ease;
+
+      &.active {
+        transform: scale(102%) !important;
+      }
 
       .category {
-        padding: 9px 32px;
+        padding: 7px 32px 9px 32px;
         background-color: $blueLight;
         color: #fff;
         font-size: 16px;
         font-weight: 500;
-        line-height: 140%;
         border-radius: 16px;
       }
 
       h4 {
         margin-top: 32px;
         margin-bottom: 16px;
-        font-size: 28px !important;
         font-weight: 700;
         line-height: 120%;
       }
@@ -86,6 +98,79 @@
 
       .btn {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .courses__bg-shape {
+    left: 35%;
+  }
+}
+
+@media (max-width: 992px) {
+  .courses {
+    &__cards {
+      &-item {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .courses {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    position: relative;
+    margin-top: 60px;
+    padding-top: 0 !important;
+
+    &__title {
+      height: 100% !important;
+    }
+  }
+  .swiper-buttons{
+    &.web {
+      display: none !important;
+    }
+
+    &.mobile {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      width: 120px;
+      height: 55px;
+      margin-top: 32px;
+      margin-left: 7px;
+
+      .swiper-button-prev::after, .swiper-button-next::after {
+        content: '';
+        width: 24px;
+        height: 24px;
+        padding: 12px 24px;
+        background-image: url(../../assets/svg/Shevron.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 2px $blueMain solid;
+        border-radius: 12px;
+        transition: border-color $duration ease;
+      }
+  
+      .swiper-button-prev:hover::after, .swiper-button-next:hover::after {
+        border-color: $blueDark;
+      }
+  
+      .swiper-button-prev:active::after, .swiper-button-next:active::after {
+        border-color: $blueLight;
+      }
+  
+      .swiper-button-next::after {
+        transform: rotate(180deg);
+        margin-right: 16px;
       }
     }
   }

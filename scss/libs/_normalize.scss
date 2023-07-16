@@ -1,9 +1,30 @@
+@font-face {
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../assets/fonts/pt-root-ui_regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../../assets/fonts/pt-root-ui_medium.woff) format(woff);
+}
+
+@font-face {
+  font-family: PT Root UI;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../../assets/fonts/pt-root-ui_bold.woff) format(woff);
+}
+
 * {
   padding: 0;
   margin: 0;
   list-style: none;
   outline: none;
-  font-family: 'Nunito', Roboto, system-ui, Tahoma, sans-serif;
+  font-family: 'PT Root UI', system-ui, Tahoma, sans-serif;
   box-sizing: border-box;
   font-size: 20px;
 }

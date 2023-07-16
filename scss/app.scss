@@ -1,5 +1,6 @@
 @import './_variables.scss';
 @import './libs/_normalize.scss';
+@import './libs/media.scss';
 
 @import './components/navbar.scss';
 @import './components/header.scss';
@@ -11,10 +12,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 120%;
 }
 
 h2 {
@@ -48,12 +52,91 @@ h4 {
   border-radius: 16px;
   font-size: 16px;
   font-weight: 500;
+  transition: background-color $duration ease;
   cursor: pointer;
+
+  &:hover {
+    background-color: $blueDark;
+  }
 
   &._secondary {
     border: 2px #fff solid;
+    transition: border-color $duration ease;
+
+    &:hover {
+      border-color: $blueDark;
+    }
   }
 }
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 992px;
+  }
+}
+
+@media (max-width: 992px) {
+  .mobile {
+    display: block;
+  }
+
+  .web {
+    display: none;
+  }
+
+  .container {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  .container {
+    width: 560px;
+  }
+}
+
+@media (max-width: 568px) {
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
 
 
 

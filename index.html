@@ -14,23 +14,28 @@
 <body>
 
   <nav class="nav">
-    <a href="#">
+    <a class="logo" href="#">
       <img src="./assets/svg/Logo.svg" alt="logo">
     </a>
-    <ul class="nav__links">
+    <ul class="nav__links web">
       <li>
-        <a href="#" id="courses">Наши курсы</a>
+        <a data-goto=".courses" href="#">Наши курсы</a>
       </li>
       <li>
-        <a href="#" id="employment">Трудоустройство</a>
+        <a data-goto=".employment" href="#">Трудоустройство</a>
       </li>
     </ul>
     <ul class="nav__contacts">
-      <li>
+      <li class="web">
         <a href="tel:+73832744820">+7(383)274-48-20</a>
       </li>
+      <li class="mobile">
+        <a href="tel:+73832744820">
+          <img src="./assets/svg/Call.svg" alt="phone">
+        </a>
+      </li>
       <li>
-        <a href="mailto:gonokhov.dm@gmail.com">
+        <a href="mailto:job@eltex-co.ru.com">
           <img src="./assets/svg/Mail.svg" alt="mail">
         </a>
       </li>
@@ -40,9 +45,32 @@
         </a>
       </li>
     </ul>
+    <div class="burger mobile">
+      <span></span>
+    </div>
   </nav>
+  <div class="mobile-menu mobile">
+    <div class="bg-dark"></div>
+    <div class="wrapper">
+      <button class="close-burger" onclick="onClickHideMenu()">
+        <img src="./assets/svg/Close.svg" alt="close">
+      </button>
+      <a class="logo" href="#">
+        <img src="./assets/svg/Logo.svg" alt="logo">
+      </a>
+      <ul class="wrapper__links">
+        <li><a data-goto=".courses" href="#" onclick="onClickHideMenu()">Наши курсы</a></li>
+        <li><a data-goto=".employment" href="#" onclick="onClickHideMenu()">Трудоустройство</a></li>
+      </ul>
+      <ul class="wrapper__contacts">
+        <li><a href="tel:+73832744820">+7(383)274-48-20</a></li>
+        <li><a href="mailto:job@eltex-co.ru">job@eltex-co.ru</a></li>
+        <li><a href="#">Группа Вконтакте</a></li>
+      </ul>
+    </div>
+  </div>
 
-  <header class="header">
+  <header class="header web">
     <div class="container">
       <div class="header__left">
         <div class="header__left-title">
@@ -55,16 +83,163 @@
         </div>
         <img src="./assets/svg/Ellipse bg.svg" alt="" class="ellipse-bg">
       </div>
-      <div class="header__right"></div>
+      <div class="header__right">
+        <div class="col-first">
+          <div class="col-first-row-first">
+            <img class="layout" src="./assets/img/Photo.png" alt="">
+            <div class="content">
+              <span>
+                <img class="number" src="./assets/svg/1.svg" alt="">
+              </span>
+              <p>Осваиваешь учебную программу курса</p>
+            </div>
+          </div>
+          <div class="col-first-row-second">
+            <img src="./assets/svg/arrow first.svg" alt="">
+          </div>
+          <div class="col-first-row-third">
+            <p>Защищаешь выпускной проект</p>
+            <img class="number" src="./assets/svg/2.svg" alt="">
+          </div>
+        </div>
+        <div class="col-second">
+          <div class="col-second-row-first">
+            <img class="number" src="./assets/svg/4.svg" alt="">
+            <span>От HR Eltex</span>
+            <p>Отправляю оффер) </br> Можно выходить на работу!</p>
+          </div>
+          <div class="col-second-row-second">
+            <div class="img-layout">
+              <img class="bg" src="./assets/img/Photo (1).png" alt="">
+              <img class="ellipses" src="./assets/svg/Ellipses.svg" alt="">
+              <div class="content">
+                <span>
+                  <img class="number" src="./assets/svg/3.svg" alt="">
+                </span>
+                <p>Проходишь собеседование</p>
+              </div>
+            </div>
+            <img src="./assets/svg/arrow second.svg" alt="">
+          </div>
+          <div class="col-second-row-third">
+            <img src="./assets/svg/arrow third.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="header mobile">
+    <div class="container">
+      <div class="header__left">
+        <div class="header__left-title">
+          <h1>Карьера в Eltex</h1>
+          <span>стань частью нашей команды</span>
+        </div>
+        <img src="./assets/svg/Ellipse bg.svg" alt="" class="ellipse-bg">
+      </div>
+      <div class="header__right web">
+        <div class="col-first">
+          <div class="col-first-row-first">
+            <img class="layout" src="./assets/img/Photo.png" alt="">
+            <div class="content">
+              <span>
+                <img class="number" src="./assets/svg/1.svg" alt="">
+              </span>
+              <p>Осваиваешь учебную программу курса</p>
+            </div>
+          </div>
+          <div class="col-first-row-second">
+            <img src="./assets/svg/arrow first.svg" alt="">
+          </div>
+          <div class="col-first-row-third">
+            <p>Защищаешь выпускной проект</p>
+            <img class="number" src="./assets/svg/2.svg" alt="">
+          </div>
+        </div>
+        <div class="col-second">
+          <div class="col-second-row-first">
+            <img class="number" src="./assets/svg/4.svg" alt="">
+            <span>От HR Eltex</span>
+            <p>Отправляю оффер) </br> Можно выходить на работу!</p>
+          </div>
+          <div class="col-second-row-second">
+            <div class="img-layout">
+              <img class="bg" src="./assets/img/Photo (1).png" alt="">
+              <img class="ellipses" src="./assets/svg/Ellipses.svg" alt="">
+              <div class="content">
+                <span>
+                  <img class="number" src="./assets/svg/3.svg" alt="">
+                </span>
+                <p>Проходишь собеседование</p>
+              </div>
+            </div>
+            <img src="./assets/svg/arrow second.svg" alt="">
+          </div>
+          <div class="col-second-row-third">
+            <img src="./assets/svg/arrow third.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="header__right mobile">
+        <div class="row-first">
+          <div class="row-first-col-first">
+            <img class="layout" src="./assets/img/Photo.png" alt="">
+            <div class="content">
+              <span>
+                <img class="number" src="./assets/svg/1.svg" alt="">
+              </span>
+              <p>Осваиваешь учебную программу курса</p>
+            </div>
+          </div>
+          <div class="row-first-col-second">
+            <img src="./assets/svg/Vector 5.svg" alt="">
+          </div>
+        </div>
+        <div class="row-second">
+          <div class="row-second-col-first">
+            <img src="./assets/svg/arrow third.svg" alt="">
+          </div>
+          <div class="row-second-col-second">
+            <p>Защищаешь выпускной проект</p>
+            <img class="number" src="./assets/svg/2.svg" alt="">
+          </div>
+        </div>
+        <div class="row-third">
+          <div class="row-third-col-first">
+            <div class="img-layout">
+              <img class="bg" src="./assets/img/Photo (1).png" alt="">
+              <div class="content">
+                <span>
+                  <img class="number" src="./assets/svg/3.svg" alt="">
+                </span>
+                <p>Проходишь собеседование</p>
+              </div>
+            </div>
+          </div>
+          <div class="row-third-col-second">
+            <img src="./assets/svg/arrow second.svg" alt="">
+          </div>
+        </div>
+        <div class="row-fourth">
+          <img class="number" src="./assets/svg/4.svg" alt="">
+            <span>От HR Eltex</span>
+            <p>Отправляю оффер) </br> Можно выходить на работу!</p>
+        </div>
+      </div>
+      <div class="header__left-info">
+        <p>Бесплатные курсы по сетям и программированию <span>для студентов.</span> После обучения получи возможность пройти оплачиваемую стажировку в Eltex</p>
+        <button class="btn">Выбрать курс</button>
+      </div>
     </div>
   </header>
 
   <div class="container">
-    <section class="courses swiper">
-      <img class="courses__bg-shape" src="./assets/svg/Shape.svg" alt="">
+    <section id="courses" class="courses swiper">
+      <img class="courses__bg-shape web" src="./assets/svg/Shape.svg" alt="">
       <div class="courses__title">
         <h2>Наши курсы</h2>
-        <div class="swiper-buttons">
+        <div class="swiper-buttons web">
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
@@ -114,30 +289,26 @@
           <img src="./assets/svg/Linux.svg" alt="">
           <button class="btn">Оставить заявку</button>
         </div>
-
-        <div class="courses__cards-item swiper-slide">
-          <span class="category">программирование</span>
-          <h4>Сисемное программирование на Linux (Embedded C)</h4>
-          <p><span>Продолжительность: </span>3,5 месяца</p>
-          <p><span>Формат: </span>очно на базе НГТУ и Eltex</p>
-          <img src="./assets/svg/Linux.svg" alt="">
-          <button class="btn">Оставить заявку</button>
-        </div>
+      </div>
+      <div class="swiper-buttons mobile">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </section>
 
-    <section class="employment">
-      <img class="employment__bg-shape" src="./assets/svg/Shape (1).svg" alt="">
+    <section id="employment" class="employment">
+      <img class="employment__bg-shape web" src="./assets/svg/Shape (1).svg" alt="">
       <div class="top">
         <div class="top__left">
           <h2>Трудоустройство выпускников в Eltex</h2>
+          <img class="mobile" src="./assets/img/Rectangle 65.png" alt="">
           <p>Eltex - ведущий российский разработчик и производитель телекоммуникационного оборудования. За 30 лет наша компания прошла путь от небольшого стартапа из нескольких десятков сотрудников до крупнейшего в отрасли предприятия страны</p>
           <a href="#">
             <button class="btn _secondary">Наши вакансии</button>
           </a> 
         </div>
         <div class="top__right">
-          <img src="./assets/img/Rectangle 65.png" alt="">
+          <img class="web" src="./assets/img/Rectangle 65.png" alt="">
         </div>
       </div>
       <div class="center">
@@ -164,6 +335,20 @@
         <h3>Почему Eltex?</h3>
         <div class="bottom__content">
           <div class="bottom__left">
+            <img src="./assets/img/Img.png" alt="">
+            <div class="area">
+              <div class="area__top">
+                <img class="elixir" src="./assets/img/Elixir.png" alt="">
+                <img class="desk" src="./assets/img/Img2.png" alt="">
+                <img  class="erlang" src="./assets/img/Erlang.png" alt="">
+                <img class="java" src="./assets/img/Java.png" alt="">
+              </div>
+              <div class="area__bottom">
+                <img class="wires" src="./assets/img/Img4.png" alt="">
+                <img class="workspace" src="./assets/img/Img3.png" alt="">
+                <img class="swift" src="./assets/img/Swift.png" alt="">
+              </div>
+            </div>
           </div>
           <div class="bottom__right">
             <ul>
@@ -196,17 +381,17 @@
     
   </div>
 
-  <footer class="footer">
+  <footer class="footer web">
     <div class="footer__top">
       <a href="#">
-        <img src="./assets/svg/Logo.svg" alt="logo">
+        <img class="logo" src="./assets/svg/Logo.svg" alt="logo">
       </a>
       <ul class="nav__links">
         <li>
-          <a href="#" id="courses">Наши курсы</a>
+          <a data-goto=".courses" href="#" id="courses">Наши курсы</a>
         </li>
         <li>
-          <a href="#" id="employment">Трудоустройство</a>
+          <a data-goto=".employment" href="#" id="employment">Трудоустройство</a>
         </li>
       </ul>
       <ul class="nav__contacts">
@@ -232,6 +417,42 @@
           </a>
         </li>
       </ul>
+      <p>© 2023 ООО «Предприятие «ЭЛТЕКС»</p>
+    </div>
+  </footer>
+
+  <footer class="footer mobile">
+    <div class="footer__top">
+      <a href="#">
+        <img class="logo" src="./assets/svg/Logo.svg" alt="logo">
+      </a>
+      <ul class="nav__links">
+        <li>
+          <a data-goto=".courses" href="#" id="courses">Наши курсы</a>
+        </li>
+        <li>
+          <a data-goto=".employment" href="#" id="employment">Трудоустройство</a>
+        </li>
+      </ul>
+      <ul class="nav__contacts">
+        <li>
+          <a href="mailto:gonokhov.dm@gmail.com">
+            <img src="./assets/svg/Mail.svg" alt="mail">
+          </a>
+        </li>
+        <li>
+          <a href="https://vk.com/gonokhov_d">
+            <img src="./assets/svg/VK.svg" alt="vk">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__bottom">
+      <a class="tel" href="tel:+73832744820">+7(383)274-48-20</a>
+      <a href="#">
+        <p>Политика конфиденциальности</p>
+      </a>
       <p>© 2023 ООО «Предприятие «ЭЛТЕКС»</p>
     </div>
   </footer>
