@@ -13,6 +13,10 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+
+  &.scroll-hiden {
+    overflow: hidden;
+  }
 }
 
 h1 {

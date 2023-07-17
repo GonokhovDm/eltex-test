@@ -162,7 +162,7 @@ nav {
 .mobile-menu {
 
   .bg-dark {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -180,7 +180,7 @@ nav {
   }
 
   .wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     transform: translate(200%);

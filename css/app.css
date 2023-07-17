@@ -214,7 +214,7 @@ nav ul.nav__contacts li a:hover {
 }
 
 .mobile-menu .bg-dark {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -231,7 +231,7 @@ nav ul.nav__contacts li a:hover {
   z-index: 5;
 }
 .mobile-menu .wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   -webkit-transform: translate(200%);
@@ -1698,6 +1698,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   overflow-x: hidden;
+}
+body.scroll-hiden {
+  overflow: hidden;
 }
 
 h1 {

@@ -25,24 +25,23 @@ if(anchors) {
 const iconMenu = document.querySelector('.burger');
 if (iconMenu) {
 	const bgDark = document.querySelector('.bg-dark');
-  const wrapper = document.querySelector('.wrapper')
+  const wrapper = document.querySelector('.wrapper');
+  const body = document.querySelector('body');
 	iconMenu.addEventListener("click", function (e) {
 		bgDark.classList.toggle('active');
     wrapper.classList.toggle('active');
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    body.classList.toggle('scroll-hiden');
 	});
 }
 
 function onClickHideMenu() {
 	const bgDark = document.querySelector('.bg-dark');
-  const wrapper = document.querySelector('.wrapper')
+  const wrapper = document.querySelector('.wrapper');
+  const body = document.querySelector('body');
 	if ((bgDark) && (wrapper)) {
 		bgDark.classList.toggle('active');
     wrapper.classList.toggle('active');
+    body.classList.toggle('scroll-hiden');
 	}
 }
 
