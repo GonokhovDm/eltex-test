@@ -34,7 +34,6 @@ nav {
 
           &::before, &::after {
             position: relative;
-            bottom: 2px;
             opacity: 0;
             transition: opacity $duration ease-in-out;
           }
